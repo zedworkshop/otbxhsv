@@ -1,0 +1,136 @@
+.btn {
+	@extend %button;
+	@include appearance(none);
+	border: none;
+	cursor: pointer;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	transition: background $transition-quick,
+	border $transition-quick,
+	color $transition-quick;
+
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	font-size: rem(11.5);
+
+	@include button-states($base-button-color);
+
+	&:focus {
+		outline: none;
+	}
+
+	&:active {
+		box-shadow: inset rgba(#000,.5) 0 2px 1px;
+	}
+
+	// Full-width
+	&-full {
+		display: block;
+		width: 100%;
+	}
+
+	// alt
+	&-alt {
+		@include button-states($brand-alt);
+	}
+
+	// Default
+	&-default {
+		@include button-states($grey-lightest, $grey-dark);
+	}
+
+	// Action button
+	&-action {
+		@include button-states($orange);
+	}
+
+	// Danger
+	&-alert {
+		@include button-states($yellow);
+	}
+
+	// Danger
+	&-danger {
+		@include button-states($red);
+	}
+
+	// Dark
+	&-dark {
+		@include button-states($grey-dark);
+	}
+
+	&-white {
+		@include button-states(#fff, $brand-black);
+
+		&:hover {
+			background-color: $brand-primary;
+			color: #fff;
+		}
+	}
+
+	// Links
+	&-link {
+		@include pad($gutter*.6 $gutter*.6);
+		letter-spacing: 0;
+		text-transform: none;
+
+		&,
+		&:link {
+			background-color: transparent;
+			box-shadow: none; // inset tint($blue, 10) 0 0 0 1px;
+			color: $blue;
+		}
+
+		&:hover {
+			background: transparent;
+			color: shade($blue, 50);
+		}
+
+		&:active {
+			background: rgba($blue,.1);
+			box-shadow: none;
+			// box-shadow: inset tint($blue, 15) 0 0 0 1px, inset rgba(#000,.2) 0 2px 1px;
+		}
+	}
+
+	@include media($small-screen-up) {
+
+		font-size: 14px;
+		font-size: rem(13.5);
+		font-weight: $font-bold;
+		@include pad($gutter*.6 $gutter);
+
+		&-link {
+			font-size: 15px;
+			font-size: rem(14.5);
+		}
+
+		// Small
+		&-sm {
+			@include pad($gutter*.55 $gutter*.7);
+			font-size: 13px;
+			font-size: rem(12.5);
+
+			&.btn-link {
+				font-size: 14px;
+				font-size: rem(13.5);
+			}
+		}
+
+		// X-Small
+		&-xs {
+			@include pad($gutter*.4 $gutter*.6);
+			font-size: 12px;
+			font-size: rem(11.5);
+
+			&.btn-link {
+				font-size: 13px;
+				font-size: rem(12.5);
+			}
+		}
+
+	}
+}

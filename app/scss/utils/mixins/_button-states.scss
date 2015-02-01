@@ -1,0 +1,14 @@
+@mixin button-states($bg, $color: #fff) {
+
+	&,
+	&:link,
+	&:visited {
+		background-color: $bg;
+		color: $color;
+	}
+
+	&:hover {
+		background-color: darken($bg, 5);
+		color: $color;
+	}
+}

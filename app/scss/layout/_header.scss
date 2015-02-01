@@ -1,0 +1,61 @@
+/*
+	Header
+------------------------------------------------*/
+
+.siteheader {
+	display: block;
+	padding: 1em 0 flex-gutter();
+	text-align: center;
+	width: 100%;
+
+	@include media($small-screen-up) {
+		text-align: center;
+	}
+}
+
+// Sitebrand
+
+.sitebrand {
+
+	.logo,
+	.tagline {
+		max-width: none;
+	}
+
+	.logo {
+		margin: 0 0 0.1em;
+
+		img {
+			height: 25px;
+		}
+	}
+
+	.tagline {
+		color: $brand-primary;
+		@include font-size(13);
+		font-weight: $font-xbold;
+		letter-spacing: 2px;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		word-spacing: 4px;
+	}
+
+	@include media($small-screen-up) {
+		margin: 0;
+		width: auto;
+
+		.logo {
+			margin: 0 0 0.3em;
+
+			img {
+				height: 40px;
+			}
+		}
+
+		.tagline {
+			@include font-size(12);
+		}
+	}
+}
