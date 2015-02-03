@@ -93,14 +93,27 @@ $info-circle-dim: 160px;
 			max-width: none;
 		}
 
-		p {
+		blockquote {
+			border: 0;
+			margin: 0 0 2em;
+			padding: 0;
+
 			color: #fff;
 			color: rgba(#fff, .85);
 			font-family: $serif;
 			font-weight: $font-semi;
-			@include font-size(21);
 			line-height: 1.4;
-			margin: 0 0 2em;
+
+			p {
+				@include font-size(21);
+				line-height: inherit;
+			}
+
+			em {
+				@include font-size(18);
+				line-height: inherit;
+			}
+
 		}
 	}
 
@@ -173,10 +186,8 @@ $info-circle-dim: 160px;
 				transition: $landing-title-transition;
 			}
 
-			p {
-				@include font-size(24);
-				text-shadow: rgba(#000, 0.1) 0 2px 3px;
-				line-height: 1.8;
+			blockquote {
+				line-height: 2;
 				margin: 0;
 				position: absolute;
 				opacity: 0;
@@ -185,6 +196,16 @@ $info-circle-dim: 160px;
 				transition-duration: $landing-title-transition-duration * 0.75, $landing-title-transition-duration, $landing-title-transition-duration;
 				transition-timing-function: $landing-title-transition-timing;
 				transition-delay: $landing-title-transition-delay/2;
+
+				p {
+					@include font-size(24);
+					text-shadow: rgba(#000, 0.2) 0 2px 3px;
+				}
+
+				em {
+					@include font-size(21);
+				}
+
 			}
 		}
 
@@ -202,10 +223,9 @@ $info-circle-dim: 160px;
 				text-shadow: rgba(0,0,0,0) 0 0 30px;
 			}
 
-			p {
+			blockquote {
 				opacity: 1;
 				line-height: 1.4;
-
 			}
 
 			.bg {

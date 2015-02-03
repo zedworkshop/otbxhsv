@@ -4100,15 +4100,23 @@ progress[value] {
       margin: 1em 0 0;
       padding: 0;
       max-width: none; }
-    .landing-section__inner p {
+    .landing-section__inner blockquote {
+      border: 0;
+      margin: 0 0 2em;
+      padding: 0;
       color: #fff;
       color: rgba(255, 255, 255, 0.85);
       font-family: "garamond-premier-pro-display", Georgia, Cambria, "Times New Roman", Times, serif;
       font-weight: 600;
-      font-size: 21px;
-      font-size: 1.28125rem;
-      line-height: 1.4;
-      margin: 0 0 2em; }
+      line-height: 1.4; }
+      .landing-section__inner blockquote p {
+        font-size: 21px;
+        font-size: 1.28125rem;
+        line-height: inherit; }
+      .landing-section__inner blockquote em {
+        font-size: 18px;
+        font-size: 1.09375rem;
+        line-height: inherit; }
   .landing-section--a {
     background: #F79400; }
     .landing-section--a .bg {
@@ -4162,11 +4170,8 @@ progress[value] {
           font-size: 140px;
           font-size: 8.71875rem;
           transition: all 800ms cubic-bezier(0.645, 0.045, 0.355, 1); }
-        .landing-section__inner p {
-          font-size: 24px;
-          font-size: 1.46875rem;
-          text-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px;
-          line-height: 1.8;
+        .landing-section__inner blockquote {
+          line-height: 2;
           margin: 0;
           position: absolute;
           opacity: 0;
@@ -4175,6 +4180,13 @@ progress[value] {
           transition-duration: 600ms, 800ms, 800ms;
           transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
           transition-delay: 100ms; }
+          .landing-section__inner blockquote p {
+            font-size: 24px;
+            font-size: 1.46875rem;
+            text-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px; }
+          .landing-section__inner blockquote em {
+            font-size: 21px;
+            font-size: 1.28125rem; }
       .landing-section:hover .landing-section__inner {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
@@ -4184,7 +4196,7 @@ progress[value] {
         font-size: 100px;
         font-size: 6.21875rem;
         text-shadow: transparent 0 0 30px; }
-      .landing-section:hover p {
+      .landing-section:hover blockquote {
         opacity: 1;
         line-height: 1.4; }
       .landing-section:hover .bg {
