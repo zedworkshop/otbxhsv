@@ -21,6 +21,7 @@
     <meta property="og:image" content="http://otbxhsv.com/images/fb.png"/>
     <meta property="og:description" content="OTBX is a beer and wine retailer in downtown Huntsville, AL. We exist to cultivate the craft beer and wine snob that exists in all of us.">
     <meta property="og:site_name" content="[OTBX] Old Town Beer Exchange">
+    <meta property="article:publisher" content="https://www.facebook.com/zedworkshop">
 
     <link rel="stylesheet" href="styles/main.css">
 
@@ -114,10 +115,13 @@
 
             <footer class="sitefooter">
 
-                <p class="siteaddress">
-                    301 Holmes Ave Suite 150<br />
-                    Huntsville, Alabama
-                </p>
+                <div class="siteaddress" itemscope itemtype="http://schema.org/Organization">
+                    <h6 class="caps" itemprop="name">Old Town Beer Exchange</h6>
+                    <p class="small" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">301 Holmes Ave, Suite 150</span><br />
+                        <span itemprop="addressLocality">Huntsville</span>, <span itemprop="addressRegion">Alabama</span> <span itemprop="postalCode">35801</span>
+                    </p>
+                </div>
 
             </footer>
 
