@@ -103,6 +103,8 @@ $info-circle-dim: 160px;
 			font-family: $serif;
 			font-weight: $font-semi;
 			line-height: 1.4;
+			width: 100%;
+			display: block;
 
 			p {
 				@include font-size(21);
